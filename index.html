@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <title>Mortgage <i class="fa fa-calculator" aria-hidden="true"></i></title>
+</head>
+<body>
+    <main>
+        <article class='hero-image columns'>
+            <form class='input-form'>
+                <h1 class='title'>Mortgage Calculator</h1>
+                <div>
+                    <p class='questionHead'>Home Purchase Price</p>
+                    <div>
+                        <label for="purchasePriceBox">$</label>                 
+                        <input type='number' pattern="[0-9]+([,\.][0-9]+)?" value="200000" id='purchasePriceBox' for="purchasePriceSlider"><br>
+                        <input type="range" min="100000" max="548250" value="200000" class="slider" id="purchasePriceSlider" name="purchasePriceSlider">
+                    </div>
+                </div>
+                <div>
+                    <p class='questionHead'>Estimated Interest Rate (%)</p>
+                    <div>
+                        <label for="interestRateBox">%</label>
+                        <input type="number" id="interestRateBox" value="4" name="interestRateBox"><br>
+                        <input type="range" min="1" max="10" value="4" step='.25' class="slider" id="interestRateSlider" name="interestRateSlider">
+                    </div>
+                </div>
+                <div>
+                    <p class='questionHead'>Estimated Yearly Insurance</p>
+                    <div>
+                        <label for="insuranceBox">$</label>                 
+                        <input type='number' value="1000" id='insuranceBox' for="insuranceSlider"><br>
+                        <input type="range" min="1" max="10000" value="1000" class="slider" id="insuranceSlider" name="insuranceSlider">
+                    </div>
+                </div>
+                <div>
+                    <p class='questionHead'>Estimated Yearly Taxes</p>
+                    <div>
+                        <label for="taxBox">$</label>                 
+                        <input type='number' value="3000" id='taxBox' for="taxSlider"><br>
+                        <input type="range" min="1" max="10000" value="3000" class="slider" id="taxSlider" name="taxSlider">
+                    </div>
+                </div>
+                <div>
+                    <p class='questionHead'>Downpayment Assistance Percentage</p>
+                        <label class="radioOption">None
+                            <input type="radio" id="none" name="dpaPercent" value=0>
+                            <span class="checkmark"></span>
+                        </label>
+ 
+                        <label class="radioOption">3.5%
+                            <input type="radio" id="3pt5perc" name="dpaPercent" value=.035 checked>
+                            <span class="checkmark"></span>
+                        </label>
+                    <label class="radioOption">5%
+                        <input type="radio" id="5perc" name="dpaPercent" value=.05>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <button id="calcButton">CALCULATE</button>
+                </div>
+            </form>
+            <div class='results'>
+                <h1 class='title'>Calculated Results</h1>
+                <div>
+                    <p class='questionHead'>Estimated Mortgage Payment</p>
+                    <p class='paymentOutput' id='estimatedPaymentOne'>$</p>
+                    <p>Monthly payment estimate with taxes and insurance.</p>
+                </div>
+                <div>
+                    <p >Contact a Chenoa Fund compliant lender or real estate agent to learn more about an estimated second mortgage payment. Or visit chenoafund.org to find out more. </p>
+                    <p>Please note that this is an estimated projection. We reccomend you speak with a lender who offers the Chenoa Fund Down Payment Assistance Programs.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+<script src="script.js"></script></html>

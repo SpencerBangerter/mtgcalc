@@ -1,0 +1,265 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+input[type="range"] { 
+    margin: 10px;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="number"] { 
+    margin: 0px;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 0px;
+}
+p{
+    font-size: 18px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} 
+
+::-webkit-slider-runnable-track {
+    background: rgb(170, 170, 170);
+    border-radius: 5px;
+
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    box-shadow: -100vw 0 0 99.7vw #0f4c89;
+    border: 2px solid #b72732;
+    border-radius: 5px;
+}
+
+::-moz-range-track {
+    height: 20px;
+    background: rgb(189, 189, 189);
+    
+}
+
+::-moz-range-thumb {
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    border: 3px solid #b72732;
+    border-radius: 5px;
+    box-shadow: -100vw 0 0 100vw #0f4c89;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower { 
+    /* background: #0f4c89; */
+    background: orange;
+
+    border-radius: 5px;
+}
+
+::-ms-thumb { 
+    background: #fff;
+    border: 2px solid #b72732;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: rgb(189, 189, 189);
+    color: transparent;
+    height: 20px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
+}
+
+.hero-image {
+    background-image: url("img1.jpeg"); 
+    background-color: #cccccc; 
+    height: 100vh; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+}
+
+.input-form {
+    background: rgba(255, 255, 255, 0.8);
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 10%;
+    width: 40%;
+    overflow-y: auto;
+}
+
+.results {
+    background: rgba(255, 255, 255, 0.8);
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 20%;
+    width: 40%;
+    overflow-y: auto;
+}
+
+.questionHead {
+    font-weight: bold;
+    font-size: 1.2rem
+}
+
+.columns {
+    column-count: 2;
+    column-gap: 10%;
+    column-width: 40%;
+}
+
+.title {
+    margin-top: 0;
+    color: #0f4c89;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.paymentOutput {
+    font-weight: bolder;
+}
+
+#taxBox, #insuranceBox {
+    width: 50px;
+}
+
+#interestRateBox {
+    width: 35px;
+}
+
+#purchasePriceBox {
+    width: 75px;
+}
+
+#calcButton {
+    background-color:#b72732;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    height: 40px;
+    width: 150px;
+    border: none;
+    margin-top: 15px;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    background: #b72732;
+    box-shadow: 0 3px 2px 0 rgba(0,0,0,0.1);
+    border-radius: 5px;
+    height: 45px;
+    padding: 0 20px;
+    color: #fff;
+    transition: background .3s, transform .3s, box-shadow .3s;
+     will-change: transform;
+}
+
+button:hover {
+    background: darken(#b72732,10%);
+    box-shadow: 0 4px 17px rgba(0,0,0,0.2);
+    transform: translate3d(0, -2px, 0);
+}
+
+button:active {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    transform: translate3d(0, 1px, 0);
+}
+  
+
+input[type="radio"] { 
+    background-color:green
+}
+
+.radioOption {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radioOption input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(170, 170, 170);
+    border-radius: 50%;
+}
+
+.radioOption:hover input ~ .checkmark {
+    background-color: rgb(133, 133, 133);
+}
+
+.radioOption input:checked ~ .checkmark {
+    background-color: #0f4c89;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radioOption input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.radioOption .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
